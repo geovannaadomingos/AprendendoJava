@@ -1,6 +1,7 @@
 // Faça um programa que receba quatro números inteiros, calcule e mostre a soma desses números.
 
 package atividade1;
+// Essa declaração indica que a classe Exercicio1 pertence ao pacote chamado atividade1. Se você tivermos outra classe chamada Exercicio1 em um pacote diferente, não haveria conflito de nomes.
 
 import java.util.Scanner;
 //  classe Scanner do pacote java.util é usada para receber entrada do usuário.

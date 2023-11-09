@@ -8,15 +8,19 @@ public class Exercicio5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Insira o primeiro número:");
-        double numero1 = scanner.nextDouble();
+        System.out.println("Insira o número da base:");
+        double base = scanner.nextDouble();
 
-        System.out.println("Insira o segundo número:");
-        double numero2 = scanner.nextDouble();
+        System.out.println("Insira o número do expoente:");
+        double expoente = scanner.nextDouble();
 
-        double resultado = Math.pow(numero1, numero2);
+        if (base > 0 && expoente > 0) {
+            // Verifica se ambos os números são maiores que zero
 
-        System.out.println("Resultado: " + resultado);
+            double resultado = Math.pow(base, expoente);
+            System.out.println("Resultado: " + resultado);
+        } else {
+            System.out.println("Por favor, insira números maiores que zero.");
+        }
     }
-
 }
