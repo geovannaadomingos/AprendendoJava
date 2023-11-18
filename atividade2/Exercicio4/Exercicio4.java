@@ -1,5 +1,3 @@
-// Desenvolva um algoritmo que receba dois números, calcule e mostre a multiplicação entre eles, se ambos forem iguais. Caso o primeiro seja maior que o segundo, mostre a subtração do primeiro pelo segundo. Caso contrário, mostre a soma entre os dois.
-
 package atividade2.Exercicio4;
 
 import java.util.Scanner;
@@ -15,11 +13,18 @@ public class Exercicio4 {
         double numero2 = scanner.nextDouble();
 
         if (numero1 == numero2) {
-            System.out.println("Multiplicação: " + (numero1 * numero2));
+            double multiplicacao = numero1 * numero2;
+            String resultado = (multiplicacao % 1 == 0) ? String.valueOf((int) multiplicacao)
+                    : String.valueOf(multiplicacao);
+            System.out.println("Multiplicação: " + resultado);
         } else if (numero1 > numero2) {
-            System.out.println("Subtração: " + (numero1 - numero2));
+            double subtracao = numero1 - numero2;
+            String resultado = (subtracao % 1 == 0) ? String.valueOf((int) subtracao) : String.valueOf(subtracao);
+            System.out.println("Subtração: " + resultado);
         } else {
-            System.out.println("Soma: " + (numero1 + numero2));
+            double soma = numero1 + numero2;
+            String resultado = (soma % 1 == 0) ? String.valueOf((int) soma) : String.valueOf(soma);
+            System.out.println("Soma: " + resultado);
         }
     }
 }
