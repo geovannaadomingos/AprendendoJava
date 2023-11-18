@@ -13,8 +13,25 @@ public class Exercicio1 {
         System.out.println("Insira um outro número:");
         double numero2 = scanner.nextDouble();
 
-        String mensagem = (numero1 > numero2) ? "O maior dos números é: " + numero1
-                : (numero1 < numero2) ? "O maior dos números é: " + numero2 : "Os dois números são iguais";
+        String mensagem = "";
+
+        if (numero1 > numero2) {
+            mensagem = "O maior dos números é: ";
+            if (numero1 % 1 == 0) {
+                mensagem += (int) numero1; // Se for inteiro, converte para int
+            } else {
+                mensagem += numero1;
+            }
+        } else if (numero1 < numero2) {
+            mensagem = "O maior dos números é: ";
+            if (numero2 % 1 == 0) {
+                mensagem += (int) numero2; // Se for inteiro, converte para int
+            } else {
+                mensagem += numero2;
+            }
+        } else {
+            mensagem = "Os dois números são iguais";
+        }
 
         System.out.println(mensagem);
     }
